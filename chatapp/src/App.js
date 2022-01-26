@@ -5,8 +5,6 @@ import { Routes, Route } from "react-router-dom";
 import io from "socket.io-client"; 
 
 const socket = io.connect('http://localhost:8000/');
-
-
 function App() {
 
   return (
@@ -14,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home socket={socket}/>}/>
         <Route path="/chat/:roomname/:username" element={<Chat socket={socket}/>}/>
-      </Routes>
+      </Routes> 
     </div>
   )
 }
